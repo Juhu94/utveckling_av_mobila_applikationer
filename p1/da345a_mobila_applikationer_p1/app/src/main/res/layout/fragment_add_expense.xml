@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/tvUtgiftUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="70dp"
+        android:text="   Ny Utgift:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etUtgiftTitel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView11"
+        android:hint="Titel"
+        android:inputType="textCapWords" />
+
+    <EditText
+        android:id="@+id/etUtgiftPris"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etUtgiftTitel"
+        android:hint="Pris"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etUtgiftDatum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etUtgiftPris"
+        android:focusable="false"
+        android:hint="Datum"
+        android:longClickable="false" />
+
+    <RadioGroup
+        android:id="@+id/rbUtgiftKategoriButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etUtgiftDatum"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbLivsmedel"
+            android:layout_width="82dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Livsmedel"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rbFritid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Fritid"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rbResor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Resor"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rbBoende"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Boende"
+            android:textSize="10sp" />
+
+        <RadioButton
+            android:id="@+id/rbUtgiftÖvrigt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Övrigt"
+            android:textSize="10sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnUtgiftAdd"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rbUtgiftKategoriButtons"
+        android:text="LÄGG TILL"
+        android:textSize="14sp" />
+</RelativeLayout>

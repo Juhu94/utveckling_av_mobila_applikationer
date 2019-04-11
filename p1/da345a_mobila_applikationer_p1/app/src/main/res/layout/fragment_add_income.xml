@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+
+    <TextView
+        android:id="@+id/tvInkomstUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/etExpenseEndDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="   Ny Inkomst:"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etInkomstTitel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etExpenseEndDate"
+        android:layout_centerHorizontal="true"
+        android:hint="Titel"
+        android:inputType="textCapWords" />
+
+    <EditText
+        android:id="@+id/etInkomstBelopp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etInkomstTitel"
+        android:layout_centerHorizontal="true"
+        android:hint="Belopp"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/etInkomstDatum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etInkomstBelopp"
+        android:layout_centerHorizontal="true"
+        android:focusable="false"
+        android:hint="Datum"
+        android:longClickable="false" />
+
+    <RadioGroup
+        android:id="@+id/rbInkomstKategoriKnappar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etInkomstDatum"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rbLön"
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lön"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/rbInkomstÖvrigt"
+            android:layout_width="244dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Övrigt"
+            android:textSize="12sp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnInkomstAdd"
+        style="@android:style/Widget.Holo.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rbInkomstKategoriKnappar"
+        android:layout_centerHorizontal="true"
+        android:text="LÄGG TILL"
+        android:textSize="14sp" />
+</RelativeLayout>
